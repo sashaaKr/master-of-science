@@ -5,7 +5,6 @@ double find_second(double,double,double);
 double find_second_2(double,double,double);
 double max(double,double);
 double run_auction(double, double);
-double run_auction_with_2_players();
 
 int main() {
     double delta = 0.01;    
@@ -17,26 +16,6 @@ int main() {
         double revenue = run_auction(r_p, delta);        
         printf("reserved price: %lf, price is: %lf\n", r_p, revenue);
     }
-}
-
-
-double run_auction_with_2_players() {
-  double player1;
-  double player2;
-
-  double init_value = 0.0;
-  double delta = 0.001;
-
-  double revenue = 0.0;
-
-  for(player1 = init_value; player1 <= 1.0; player1 += delta) {
-   for(player2 = init_value; player2 <= 1.0; player2 += delta) {
-     if (player1 >= player2) revenue += player2;
-     else revenue += player1;
-    } 
-  }
-
-  return revenue * delta * delta;
 }
 
 double run_auction(double reserved_price, double delta) {
@@ -79,12 +58,6 @@ double revenue(double x,double y,double z,double reserve) {
 
 double max(double a, double b) {
     if(a > b)
-        return a;
-    else
-        return b;
-}
-double min(double a, double b) {
-    if(a < b)
         return a;
     else
         return b;
