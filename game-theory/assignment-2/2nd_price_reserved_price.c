@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-double revenue(double,double,double,double);
-double find_second(double,double,double);
-double find_second_2(double,double,double);
 double max(double,double);
+double revenue(double,double,double,double);
 double run_auction(double);
+double find_second(double,double,double);
 
 static double DELTA = 0.01;
 static double MAX_PLAYER_BID = 1.0;
@@ -19,7 +18,7 @@ int main() {
     printf("Start auctions with delta: %lf, it will take some time, number of iterations: %d\n**********************************************\n\n\n", DELTA, total_number_of_iterations);
     for (i = 0; i < count; i++) {
         double r_p = reserved_prices[i];
-        double revenue = run_auction(r_p);        
+        double revenue = run_auction(r_p);
         printf("reserved price: %lf, price is: %lf\n", r_p, revenue);
     }
 }
