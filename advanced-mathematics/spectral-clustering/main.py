@@ -1,7 +1,8 @@
-import matplotlib.pyplot as plt
+import pip3 install matplotlib.pyplot as plt
 import networkx as nx
 
-G = nx.random_geometric_graph(200, 0.125)
+nof_nodes = 100
+G = nx.random_geometric_graph(nof_nodes, 0.125)
 # position is stored as node attribute data for random_geometric_graph
 pos = nx.get_node_attributes(G, "pos")
 
@@ -28,8 +29,11 @@ nx.draw_networkx_nodes(
     # node_color=list(p.values()),
     cmap=plt.cm.Reds_r,
 )
+L = nx.laplacian_matrix(G)
+A = nx.convert_matrix.to_numpy_array(G)
 
 plt.xlim(-0.05, 1.05)
 plt.ylim(-0.05, 1.05)
 plt.axis("off")
 plt.show()
+print (A)
