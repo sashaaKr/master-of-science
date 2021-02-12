@@ -1,8 +1,10 @@
 import pip3 install matplotlib.pyplot as plt
 import networkx as nx
 
+np.set_printoptions(threshold=sys.maxsize)
+
 nof_nodes = 100
-G = nx.random_geometric_graph(nof_nodes, 0.125)
+G = nx.random_geometric_graph(nof_nodes, 0.65)
 # position is stored as node attribute data for random_geometric_graph
 pos = nx.get_node_attributes(G, "pos")
 
@@ -31,9 +33,13 @@ nx.draw_networkx_nodes(
 )
 L = nx.laplacian_matrix(G)
 A = nx.convert_matrix.to_numpy_array(G)
-
+DergeeList = list(G.degree)
+D = np.zeros((nof_nodes, nof_nodes))
+for node in range(len(DergeeList)):
+    D[node][node] = DergeeList[node][1]
 plt.xlim(-0.05, 1.05)
 plt.ylim(-0.05, 1.05)
 plt.axis("off")
-plt.show()
 print (A)
+print (D)
+plt.show()
