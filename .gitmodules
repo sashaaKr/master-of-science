@@ -1,3 +1,6 @@
 [submodule "semester_3/processing_analyzing_decision_making_gadi/reveal.js"]
 	path = semester_3/processing_analyzing_decision_making_gadi/reveal.js
 	url = https://github.com/hakimel/reveal.js.git
+[submodule "reveal.js"]
+	path = reveal.js
+	url = https://github.com/hakimel/reveal.js.git
