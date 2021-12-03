@@ -7,11 +7,11 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>Presentation slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>index slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <!-- General and theme style sheets -->
-<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
-<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js/dist/reveal.css">
+<link rel="stylesheet" href="reveal.js/dist/theme/simple.css" id="theme">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -14447,8 +14447,8 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Hello-world-problem">Hello world problem<a class="anchor-link" href="#Hello-world-problem">&#182;</a></h1><p>Given a small closed set of candidate authors asked to attribute an anonymous test to one of them
-Usually, it is assumed that we have copious quantities of text by each candidate author and that the anonymous text is reasonably long.</p>
+<h1 id="Hello-world-problem">Hello world problem<a class="anchor-link" href="#Hello-world-problem">&#182;</a></h1><p>Given a small closed set of candidate authors asked to attribute an anonymous test to one of them.</p>
+<p>Usually, it is assumed that we have copious quantities of text by each candidate author and that the anonymous text is reasonably long.</p>
 
 </div>
 </div></section></section><section><section>
@@ -14463,7 +14463,7 @@ Usually, it is assumed that we have copious quantities of text by each candidate
 <ul>
 <li>list of candidates very large</li>
 <li>no guarantee that the true author of disputed text is even among the candidates</li>
-<li>writing we by each candidate might be very limited</li>
+<li>writing by each candidate might be very limited</li>
 <li>anonymous text is short</li>
 </ul>
 
@@ -14869,7 +14869,7 @@ Usually, it is assumed that we have copious quantities of text by each candidate
 <li>high recall relates to a low false negative rate</li>
 </ul>
 <p>Consider how the number of candidate authors affects precision and recall</p>
-<p><img src="./assets/precision_recall.png" width="900"></p>
+<p><img src="./assets/precision_recall.png" width="600"></p>
 <p>Accuracy increases as the number of candidate authors diminishes.</p>
 <p>By varying the threshold for identifying an input pair as being by the same author, we control the trade-off between precision and recall.</p>
 <p>For 1k candidates, at ϑ* = 0.9, achieved 93.2 per cent precision at 39.3 per cent recall.</p>
@@ -15224,7 +15224,7 @@ require(
       waitSeconds: 15
     },
     [
-      "https://unpkg.com/reveal.js@4.0.2/dist/reveal.js"
+      "reveal.js/dist/reveal.js"
     ],
 
     function(Reveal){
