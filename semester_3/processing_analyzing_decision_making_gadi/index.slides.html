@@ -10,8 +10,8 @@
 <title>index slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <!-- General and theme style sheets -->
-<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
-<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js/dist/reveal.css">
+<link rel="stylesheet" href="reveal.js/dist/theme/simple.css" id="theme">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -14766,13 +14766,6 @@ div.jp-OutputPrompt {
 <h1 id="by-reduction-from-&quot;fundamental&quot;-to-any-another-problem">by reduction from "fundamental" to any another problem<a class="anchor-link" href="#by-reduction-from-&quot;fundamental&quot;-to-any-another-problem">&#182;</a></h1><p><img src="https://i0.wp.com/ric.org.il/wp-content/uploads/2021/05/Gila_Morgensterm.jpg?width=120&amp;height=80" width="300" height="300"></p>
 
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="The-main-idea-of-proposed-approach">The main idea of proposed approach<a class="anchor-link" href="#The-main-idea-of-proposed-approach">&#182;</a></h1><p>Given two input texts: X and Y. Generate a set of impostors.</p>
-<p>Then check if Y can be singled out from among the impostors as the most likely author of X</p>
-
-</div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14792,11 +14785,7 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Feature-representation">Feature representation<a class="anchor-link" href="#Feature-representation">&#182;</a></h1><p>Each text: known text and snippet is represented as space-free character 4-gram, with following definition:</p>
-<ul>
-<li>a string of characters of length four that includes no spaces</li>
-<li>a string of four or fewer characters surrounded by spaces</li>
-</ul>
+<h1 id="Feature-representation">Feature representation<a class="anchor-link" href="#Feature-representation">&#182;</a></h1><p>Each text: known text and snippet is represented as space-free character 4-gram.</p>
 <p>Character n-grams have been shown to be effective for authorship attribution and have the advantage of being measurable in any language without specialized background knowledge.</p>
 
 </div>
@@ -14962,7 +14951,7 @@ require(
       waitSeconds: 15
     },
     [
-      "https://unpkg.com/reveal.js@4.0.2/dist/reveal.js"
+      "reveal.js/dist/reveal.js"
     ],
 
     function(Reveal){
